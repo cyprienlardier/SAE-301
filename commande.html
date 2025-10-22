@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mes Commandes - SAÉ3.01</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+	<header class="sticky top-0 z-10 shadow-sm">
+		<nav class="text-white" style="background-color: var(--color-blue);">
+			<section class="max-w-6xl mx-auto px-4">
+				<section class="h-14 flex items-center justify-between">
+					<a href="Profil.html" class="flex items-center gap-2 text-sm hover:underline" aria-label="Retour au profil">
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+						</svg>
+						<span>Retour au profil</span>
+					</a>
+					<h1 class="text-base sm:text-lg font-semibold">Mes Commandes</h1>
+					<span class="w-12"></span>
+				</section>
+			</section>
+		</nav>
+	</header>
+
+	<main class="max-w-6xl mx-auto px-4 py-6">
+		<!-- Statistics cards -->
+		<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
+				<p class="text-xs text-gray-500 mb-1">Total commandes</p>
+				<p class="text-3xl font-bold" style="color: var(--color-blue);">1</p>
+			</article>
+			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
+				<p class="text-xs text-gray-500 mb-1">En cours</p>
+				<p class="text-3xl font-bold" style="color: var(--color-blue);">1</p>
+			</article>
+			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
+				<p class="text-xs text-gray-500 mb-1">Livrées</p>
+				<p class="text-3xl font-bold" style="color: var(--color-blue);">0</p>
+			</article>
+			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
+				<p class="text-xs text-gray-500 mb-1">Total dépensé</p>
+				<p class="text-3xl font-bold" style="color: var(--color-blue);">555,98€</p>
+			</article>
+		</section>
+
+		<!-- Order history -->
+		<section class="bg-white rounded-xl shadow-sm border border-gray-200">
+			<header class="px-6 py-4 border-b border-gray-200">
+				<h2 class="text-xl font-semibold" style="color: var(--color-blue);">Historique des commandes</h2>
+			</header>
+
+			<!-- Order item -->
+			<article class="p-6 border-b border-gray-200">
+				<section class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+					<section>
+						<h3 class="font-semibold text-lg mb-1">Commande CMD-2025-007</h3>
+						<p class="text-sm text-gray-600">Passée le 15 octobre 2025</p>
+					</section>
+					<section class="mt-2 md:mt-0 flex items-center gap-3">
+						<span class="text-2xl font-bold" style="color: var(--color-blue);">555,98€</span>
+						<span class="px-3 py-1 rounded-full text-xs font-medium text-white" style="background-color: #f59e0b;">
+							En Cours
+						</span>
+					</section>
+				</section>
+
+				<!-- Product in order -->
+				<section class="flex items-center gap-4 mb-4 p-4 bg-gray-50 rounded-lg">
+					<img src="/ps5.png" alt="PlayStation 5" class="w-16 h-16 object-contain">
+					<section class="flex-grow">
+						<p class="font-medium">PlayStation 5</p>
+						<p class="text-sm text-gray-600">Qté: 1</p>
+					</section>
+				</section>
+
+				<!-- Action buttons -->
+				<section class="flex flex-col sm:flex-row gap-3">
+					<button class="flex-1 inline-flex items-center justify-center gap-2 text-white py-2.5 px-4 rounded-lg font-medium transition-colors hover:opacity-90" style="background-color: var(--color-blue);">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+						</svg>
+						Télécharger la facture
+					</button>
+					<button class="flex-1 inline-flex items-center justify-center gap-2 border-2 py-2.5 px-4 rounded-lg font-medium transition-colors hover:bg-gray-50" style="border-color: var(--color-blue); color: var(--color-blue);">
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+						</svg>
+						Envoyer par email
+					</button>
+				</section>
+			</article>
+
+			<!-- Empty state for additional orders (commented out, uncomment when needed) -->
+			<!--
+			<section class="p-12 text-center">
+				<svg class="w-16 h-16 mx-auto mb-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+				</svg>
+				<h3 class="text-lg font-semibold text-gray-700 mb-2">Aucune autre commande</h3>
+				<p class="text-gray-500 text-sm">Vous n'avez pas encore d'autres commandes</p>
+			</section>
+			-->
+		</section>
+	</main>
+
+	<footer class="text-white mt-12" style="background-color: var(--color-dark-blue);">
+		<section class="container mx-auto px-4 py-8">
+			<section class="grid grid-cols-1 md:grid-cols-4 gap-8">
+				<section>
+					<h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Service Client</h4>
+					<ul class="space-y-2 text-sm">
+						<li><a href="#" class="hover:underline">Contactez-nous</a></li>
+						<li><a href="#" class="hover:underline">FAQ</a></li>
+						<li><a href="#" class="hover:underline">Suivi de commande</a></li>
+						<li><a href="#" class="hover:underline">Retours et remboursements</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">À propos</h4>
+					<ul class="space-y-2 text-sm">
+						<li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
+						<li><a href="#" class="hover:underline">Nos magasins</a></li>
+						<li><a href="#" class="hover:underline">Recrutement</a></li>
+						<li><a href="#" class="hover:underline">Partenaires</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Informations légales</h4>
+					<ul class="space-y-2 text-sm">
+						<li><a href="#" class="hover:underline">Mentions légales</a></li>
+						<li><a href="#" class="hover:underline">CGV</a></li>
+						<li><a href="#" class="hover:underline">Politique de confidentialité</a></li>
+						<li><a href="#" class="hover:underline">Gestion des cookies</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h4 class="font-semibold mb-4" style="color: var(--color-light-green);">Suivez-nous</h4>
+					<ul class="flex space-x-3">
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+							<img src="/Facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+						</li>
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+							<img src="/X.png" alt="X (Twitter)" class="w-4 h-4 object-contain">
+						</li>
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+							<img src="/Insta.png" alt="Instagram" class="w-5 h-5 object-contain">
+						</li>
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+							<img src="/youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
+						</li>
+					</ul>
+				</section>
+			</section>
+
+			<section class="mt-8 pt-4 border-t border-gray-600">
+				<address class="flex flex-col md:flex-row justify-between items-center not-italic">
+					<p class="text-sm text-gray-300">© 2025 Micromania. Tous droits réservés.</p>
+					<section class="flex space-x-4 mt-4 md:mt-0">
+						<span class="text-sm text-gray-300">Moyens de paiement acceptés</span>
+						<nav class="flex space-x-3 items-center" aria-label="Moyens de paiement">
+							<span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+								<img src="/visa-logo-0.png" alt="Visa" class="h-5 object-contain">
+							</span>
+							<span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+								<img src="/Mastercard_2019_logo.svg.png" alt="Mastercard" class="h-5 object-contain">
+							</span>
+							<span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+								<img src="/pp_cc_mark_74x46.jpg" alt="PayPal" class="h-5 object-contain">
+							</span>
+							<span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+								<img src="/CB.png" alt="Carte Bancaire" class="h-5 object-contain">
+							</span>
+						</nav>
+					</section>
+				</address>
+			</section>
+		</section>
+	</footer>
+</body>
+</html>
+
+
+

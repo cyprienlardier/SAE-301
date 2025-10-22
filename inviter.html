@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Validation de la commande - SAÉ3.01</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <header class="bg-white border-b border-gray-200">
+        <section class="container mx-auto px-4 py-6">
+            <a href="validation.html" class="inline-flex items-center text-blue-600 hover:underline mb-4">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Retour au panier
+            </a>
+            <h1 class="text-3xl font-bold" style="color: var(--color-blue);">Validation de la commande</h1>
+            <section class="mt-2 h-1 w-full bg-gray-200 rounded">
+                <section class="h-1 rounded" style="width: 66%; background-color: var(--color-light-green);"></section>
+            </section>
+        </section>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left column - Form -->
+            <section class="lg:col-span-2 space-y-8">
+                <!-- Delivery Method -->
+                <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <h2 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Mode de livraison</h2>
+                    
+                    <section class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <!-- Livraison Agglomération -->
+                        <label class="relative border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start justify-between mb-2">
+                                <section>
+                                    <h3 class="font-semibold">Livraison Agglomération de Limoges</h3>
+                                    <p class="text-xs text-gray-600">Livraison rapide sur Limoges et ses environs</p>
+                                </section>
+                                <input type="radio" name="livraison" value="agglo" class="w-5 h-5" style="accent-color: var(--color-blue);" />
+                            </section>
+                            <p class="text-sm text-gray-600 mb-1">24-48h</p>
+                            <p class="font-bold mb-1" style="color: var(--color-blue);">4,99€</p>
+                            <p class="text-xs text-gray-500">De 2-5 kg</p>
+                        </label>
+
+                        <!-- Livraison France -->
+                        <label class="relative border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start justify-between mb-2">
+                                <section>
+                                    <h3 class="font-semibold">Livraison France</h3>
+                                    <p class="text-xs text-gray-600">Livraison standard en France métropolitaine</p>
+                                </section>
+                                <input type="radio" name="livraison" value="france" class="w-5 h-5" style="accent-color: var(--color-blue);" />
+                            </section>
+                            <p class="text-sm text-gray-600 mb-1">3-5 jours</p>
+                            <p class="font-bold mb-1" style="color: var(--color-blue);">7,99€</p>
+                            <p class="text-xs text-gray-500">De 2-5 kg</p>
+                        </label>
+                    </section>
+
+                    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Livraison Internationale -->
+                        <label class="relative border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start justify-between mb-2">
+                                <section>
+                                    <h3 class="font-semibold">Livraison Internationale</h3>
+                                    <p class="text-xs text-gray-600">Livraison dans les pays membres</p>
+                                </section>
+                                <input type="radio" name="livraison" value="international" class="w-5 h-5" style="accent-color: var(--color-blue);" />
+                            </section>
+                            <p class="text-sm text-gray-600 mb-1">7-14 jours</p>
+                            <p class="font-bold mb-1" style="color: var(--color-blue);">24,99€</p>
+                            <p class="text-xs text-gray-500">De 2-5 kg</p>
+                        </label>
+
+                        <!-- Click & Collect -->
+                        <label class="relative border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start justify-between mb-2">
+                                <section>
+                                    <h3 class="font-semibold">Click & Collect</h3>
+                                    <p class="text-xs text-gray-600">Retrait gratuit en magasin / Disponible en 2h ou 2h</p>
+                                </section>
+                                <input type="radio" name="livraison" value="collect" class="w-5 h-5" style="accent-color: var(--color-blue);" />
+                            </section>
+                            <p class="text-sm text-gray-600 mb-1">2h / 3h</p>
+                            <p class="font-bold text-green-600">Gratuit</p>
+                        </label>
+                    </section>
+                </article>
+
+                <!-- Click & Collect Time Selection (visible uniquement si Click & Collect sélectionné) -->
+                <article id="collectTimeSection" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hidden">
+                    <section class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                        <h3 class="font-semibold mb-2" style="color: var(--color-blue);">Adresse du magasin :</h3>
+                        <p class="text-sm text-gray-700">123 Avenue des Champs-Élysées, 87000 Limoges</p>
+                        <p class="text-sm text-gray-700">Ouvert du lundi au samedi, 10h-19h</p>
+                    </section>
+
+                    <h2 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Choisissez votre créneau de retrait</h2>
+                    
+                    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Retrait dans 2 heures -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start gap-3">
+                                <input type="radio" name="creneau" value="2h" class="mt-1" style="accent-color: var(--color-blue);" />
+                                <section>
+                                    <h3 class="font-semibold" style="color: var(--color-blue);">Retrait dans 2 heures</h3>
+                                    <p class="text-xs text-gray-600">Disponible aujourd'hui</p>
+                                </section>
+                            </section>
+                        </label>
+
+                        <!-- Retrait dans 3 heures -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start gap-3">
+                                <input type="radio" name="creneau" value="3h" class="mt-1" style="accent-color: var(--color-blue);" />
+                                <section>
+                                    <h3 class="font-semibold" style="color: var(--color-blue);">Retrait dans 3 heures</h3>
+                                    <p class="text-xs text-gray-600">Disponible aujourd'hui</p>
+                                </section>
+                            </section>
+                        </label>
+
+                        <!-- Demain matin (10h-12h) -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start gap-3">
+                                <input type="radio" name="creneau" value="demain-matin" class="mt-1" style="accent-color: var(--color-blue);" />
+                                <section>
+                                    <h3 class="font-semibold" style="color: var(--color-blue);">Demain matin (10h-12h)</h3>
+                                    <p class="text-xs text-gray-600">Retrait le lendemain</p>
+                                </section>
+                            </section>
+                        </label>
+
+                        <!-- Demain après-midi (14h-19h) -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <section class="flex items-start gap-3">
+                                <input type="radio" name="creneau" value="demain-aprem" class="mt-1" style="accent-color: var(--color-blue);" />
+                                <section>
+                                    <h3 class="font-semibold" style="color: var(--color-blue);">Demain après-midi (14h-19h)</h3>
+                                    <p class="text-xs text-gray-600">Retrait le lendemain</p>
+                                </section>
+                            </section>
+                        </label>
+                    </section>
+                </article>
+
+                <!-- Delivery Time Selection -->
+                <article id="deliveryTimeSection" class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <h2 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Choisissez votre jour de livraison</h2>
+                    
+                    <section class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <!-- Aujourd'hui 15 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="15" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Aujourd'hui 15 octobre</p>
+                        </label>
+                        
+                        <!-- Demain 16 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="16" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Demain 16 octobre</p>
+                        </label>
+                        
+                        <!-- Vendredi 17 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="17" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Vendredi 17 octobre</p>
+                        </label>
+                        
+                        <!-- Samedi 18 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="18" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Samedi 18 octobre</p>
+                        </label>
+                        
+                        <!-- Lundi 20 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="20" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Lundi 20 octobre</p>
+                        </label>
+                        
+                        <!-- Mardi 21 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="21" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Mardi 21 octobre</p>
+                        </label>
+                        
+                        <!-- Mercredi 22 octobre -->
+                        <label class="border-2 border-gray-200 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 transition-all has-[:checked]:border-blue-500 has-[:checked]:bg-blue-50">
+                            <input type="radio" name="jour" value="22" class="mb-2" style="accent-color: var(--color-blue);" />
+                            <p class="text-sm" style="color: var(--color-blue);">Mercredi 22 octobre</p>
+                        </label>
+                    </section>
+                </article>
+
+                <!-- Delivery Information Form -->
+                <article class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <section class="flex items-center justify-between mb-4">
+                        <h2 class="text-xl font-bold" style="color: var(--color-blue);">Informations de livraison</h2>
+                        <button class="text-sm text-blue-600 hover:underline">Changer de méthode</button>
+                    </section>
+                    
+                    <form class="space-y-4">
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <section>
+                                <label for="prenom" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Prénom <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="prenom" 
+                                    name="prenom" 
+                                    value="Jean" 
+                                    required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </section>
+                            
+                            <section>
+                                <label for="nom" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Nom <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="nom" 
+                                    name="nom" 
+                                    value="Dupont" 
+                                    required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </section>
+                        </section>
+
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <section>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Email <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    value="jean.dupont@email.com" 
+                                    required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </section>
+                            
+                            <section>
+                                <label for="telephone" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Téléphone <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="telephone" 
+                                    name="telephone" 
+                                    value="0612345678" 
+                                    required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </section>
+                        </section>
+
+                        <section>
+                            <label for="adresse" class="block text-sm font-medium text-gray-700 mb-1">
+                                Adresse de livraison <span class="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="text" 
+                                id="adresse" 
+                                name="adresse" 
+                                value="13 rue de la République" 
+                                required 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                            />
+                        </section>
+
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <section>
+                                <label for="ville" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Ville <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="ville" 
+                                    name="ville" 
+                                    value="Paris" 
+                                    required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </section>
+                            
+                            <section>
+                                <label for="code-postal" class="block text-sm font-medium text-gray-700 mb-1">
+                                    Code postal <span class="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="code-postal" 
+                                    name="code-postal" 
+                                    value="75001" 
+                                    required 
+                                    class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                                />
+                            </section>
+                        </section>
+
+                        <a href="confirmation.html" class="block w-full text-center text-white py-3 px-4 rounded-lg font-medium text-lg transition-colors hover:opacity-90" style="background-color: var(--color-light-green);">
+                            Valider la commande
+                        </a>
+                    </form>
+                </article>
+            </section>
+
+            <!-- Right column - Récapitulatif -->
+            <aside class="lg:col-span-1">
+                <article class="bg-white rounded-lg shadow-lg p-6 sticky top-4">
+                    <h2 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Récapitulatif</h2>
+                    
+                    <!-- Product item -->
+                    <section class="flex items-center gap-4 pb-4 mb-4 border-b border-gray-200">
+                        <img src="/ps5.png" alt="PlayStation 5" class="w-20 h-20 object-contain">
+                        <section class="flex-grow">
+                            <h3 class="font-semibold text-sm">PlayStation 5</h3>
+                            <p class="text-xs text-gray-500">Quantité: 1</p>
+                            <p class="font-bold mt-1" style="color: var(--color-blue);">549,99€</p>
+                        </section>
+                    </section>
+
+                    <!-- Price summary -->
+                    <section class="space-y-2 text-sm mb-4">
+                        <section class="flex justify-between">
+                            <span class="text-gray-600">Sous-total</span>
+                            <span class="font-medium">549,99€</span>
+                        </section>
+                        <section class="flex justify-between text-xs">
+                            <span class="text-gray-500">Poids total du colis</span>
+                            <span class="text-gray-500">4,20 kg</span>
+                        </section>
+                        <section class="flex justify-between">
+                            <span class="text-gray-600">Livraison</span>
+                            <span class="font-medium" style="color: var(--color-blue);">7,99€</span>
+                        </section>
+                        <section class="flex justify-between text-xs">
+                            <span class="text-gray-500"></span>
+                            <span class="text-gray-500">De 2-5 kg</span>
+                        </section>
+                    </section>
+
+                    <!-- Total -->
+                    <section class="pt-4 border-t-2 border-gray-200">
+                        <section class="flex justify-between items-center">
+                            <span class="text-lg font-bold">Total</span>
+                            <span class="text-2xl font-bold" style="color: var(--color-blue);">557,98€</span>
+                        </section>
+                    </section>
+                </article>
+            </aside>
+        </section>
+    </main>
+
+    <script>
+        // Gestion de l'affichage Click & Collect vs Livraison standard
+        const livraisonRadios = document.querySelectorAll('input[name="livraison"]');
+        const collectTimeSection = document.getElementById('collectTimeSection');
+        const deliveryTimeSection = document.getElementById('deliveryTimeSection');
+
+        livraisonRadios.forEach(radio => {
+            radio.addEventListener('change', function() {
+                if (this.value === 'collect') {
+                    // Afficher section Click & Collect, masquer section dates
+                    collectTimeSection.classList.remove('hidden');
+                    deliveryTimeSection.classList.add('hidden');
+                } else {
+                    // Afficher section dates, masquer section Click & Collect
+                    collectTimeSection.classList.add('hidden');
+                    deliveryTimeSection.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+
+    <footer class="text-white mt-auto" style="background-color: var(--color-dark-blue);">
+        <section class="container mx-auto px-4 py-8">
+            <section class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Service Client</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Contactez-nous</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                        <li><a href="#" class="hover:underline">Suivi de commande</a></li>
+                        <li><a href="#" class="hover:underline">Retours et remboursements</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">À propos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
+                        <li><a href="#" class="hover:underline">Nos magasins</a></li>
+                        <li><a href="#" class="hover:underline">Recrutement</a></li>
+                        <li><a href="#" class="hover:underline">Partenaires</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Informations légales</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Mentions légales</a></li>
+                        <li><a href="#" class="hover:underline">CGV</a></li>
+                        <li><a href="#" class="hover:underline">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:underline">Gestion des cookies</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-light-green);">Suivez-nous</h4>
+                    <ul class="flex space-x-3">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+                            <img src="/Facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+                        </li>
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+                            <img src="/X.png" alt="X (Twitter)" class="w-4 h-4 object-contain">
+                        </li>
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+                            <img src="/Insta.png" alt="Instagram" class="w-5 h-5 object-contain">
+                        </li>
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+                            <img src="/youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="mt-8 pt-4 border-t border-gray-600">
+                <address class="flex flex-col md:flex-row justify-between items-center not-italic">
+                    <p class="text-sm text-gray-300">© 2025 Micromania. Tous droits réservés.</p>
+                    <section class="flex space-x-4 mt-4 md:mt-0">
+                        <span class="text-sm text-gray-300">Moyens de paiement acceptés</span>
+                        <nav class="flex space-x-3 items-center" aria-label="Moyens de paiement">
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/visa-logo-0.png" alt="Visa" class="h-5 object-contain">
+                            </span>
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/Mastercard_2019_logo.svg.png" alt="Mastercard" class="h-5 object-contain">
+                            </span>
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/pp_cc_mark_74x46.jpg" alt="PayPal" class="h-5 object-contain">
+                            </span>
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/CB.png" alt="Carte Bancaire" class="h-5 object-contain">
+                            </span>
+                        </nav>
+                    </section>
+                </address>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
+
+
+

@@ -1,1 +1,59 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
+
+
+@layer theme {
+  :root {
+    --color-blue: oklch(59.6% 0.133 264.5); 
+		--color-neon-green: oklch(91.4% 0.372 136.5); 
+		--color-light-green: oklch(78.9% 0.215 145.5); 
+		--color-dark-blue: oklch(29.8% 0.133 264.5); 
+		--color-red: oklch(62.8% 0.257 27.8); 
+		--color-green: oklch(62.8% 0.154 155.8);
+		
+		--font-jost: 'Jost', sans-serif;
+		--font-jost-regular: 400;
+		--font-jost-semibold: 600;
+  }
+}
+
+@layer base {
+  :root {
+   
+    --clr-blue: #007BFF;
+    --clr-green: #39FF14;
+    --clr-green-dark: #7AC943;
+    --clr-blue-dark: #003D7A;
+    --clr-red: #E74C3C;
+    --clr-white: #FFFFFF;
+    --clr-black: #000000;
+    --clr-black: #000000;
+
+ 
+  }
+  
+ 
+  nav, nav a, nav ul, nav li {
+    font-family: var(--font-jost);
+    font-weight: var(--font-jost-regular);
+  }
+  
+ 
+  a[href="Panier.html"], button {
+    font-family: var(--font-jost);
+    font-weight: var(--font-jost-semibold);
+  }
+  
+  /* Menu burger */
+  .mobile-menu {
+    display: none;
+  }
+  
+  .mobile-menu.active {
+    display: block;
+  }
+  
+  .burger-icon {
+    cursor: pointer;
+  }
+}

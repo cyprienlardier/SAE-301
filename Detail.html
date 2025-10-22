@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SAÉ3.01</title>
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <header class="flex flex-col lg:flex-row">
+        <section class="text-black p-4 flex items-center justify-between lg:justify-end w-full lg:w-[700px]" style="background-color: var(--color-blue);">
+            <h1 class="text-2xl font-bold"><a href="Index.html" class="hover:underline">Micromania</a></h1>
+            
+            <button class="lg:hidden burger-icon" onclick="document.getElementById('mobileMenu').classList.toggle('active')" aria-label="Menu">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+            </button>
+        </section>
+        
+        <nav class="text-black py-4 px-4 lg:px-8 flex-grow" style="background-color: var(--color-neon-green);" aria-label="Navigation principale">
+            <section class="hidden lg:flex items-center justify-between">
+                <ul class="flex space-x-8">
+                <li><a href="It-1.HTML" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Console</a></li>
+                <li><a href="Catégory.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Jeux vidéo</a></li>
+                <li><a href="Produit.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Produits Dérivés</a></li>
+                <li><a href="#" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Click and collect</a></li>
+            </ul>                <section class="flex space-x-6" aria-label="Actions utilisateur">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <a href="Profil.html" aria-label="Mon compte">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </a>
+                    <a href="Panier.html" aria-label="Panier">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c-.08-.14-.12-.31-.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                    </a>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </section>
+            </section>
+            
+            <section id="mobileMenu" class="mobile-menu lg:hidden">
+                <ul class="flex flex-col space-y-2 mb-4">
+                    <li><a href="It-1.HTML" class="block font-medium px-4 py-2 rounded hover:bg-white hover:bg-opacity-20">Console</a></li>
+                    <li><a href="Catégory.html" class="block font-medium px-4 py-2 rounded hover:bg-white hover:bg-opacity-20">Jeux vidéo</a></li>
+                    <li><a href="Produit.html" class="block font-medium px-4 py-2 rounded hover:bg-white hover:bg-opacity-20">Produits Dérivés</a></li>
+                    <li><a href="#" class="block font-medium px-4 py-2 rounded hover:bg-white hover:bg-opacity-20">Click and collect</a></li>
+                </ul>
+                
+                <section class="flex space-x-6 justify-center pt-4 border-t border-black border-opacity-20" aria-label="Actions utilisateur">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <a href="Profil.html" aria-label="Mon compte">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                        </svg>
+                    </a>
+                    <a href="Panier.html" aria-label="Panier">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c-.08-.14-.12-.31-.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                        </svg>
+                    </a>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                    </svg>
+                </section>
+            </section>
+        </nav>
+    </header>
+
+    <main class="container mx-auto py-8 px-4 flex-grow">
+    <a href="It-1.HTML" class="text-blue-600 hover:underline mb-6 inline-block">
+            ← Retour à la liste
+        </a>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <section class="p-4 rounded-lg flex items-center justify-center">
+                <img src="/ps5.png" alt="PlayStation 5" class="w-full h-full object-contain" style="max-height: 600px;">
+            </section>
+
+            <section>
+                <span class="inline-block text-white text-xs font-bold px-3 py-1 rounded mb-4" style="background-color: var(--color-blue);">
+                    PlayStation 5
+                </span>
+                
+                <h1 class="text-4xl font-bold mb-4" style="color: var(--color-blue);">PlayStation 5</h1>
+                
+                <p class="text-3xl font-bold mb-6" style="color: var(--color-blue);">549,99€</p>
+                
+                <p class="text-gray-600 mb-6">
+                    La console nouvelle génération de Sony avec des graphismes ultra-réalistes
+                </p>
+
+                <section class="mb-6">
+                    <h3 class="font-semibold mb-3" style="color: var(--color-blue);">Personnalisez votre choix</h3>
+                    
+                    <section class="mb-4">
+                        <p class="text-sm font-medium mb-2">Capacité: <span class="font-bold">825 Go</span></p>
+                        <section class="flex gap-3">
+                            <button class="px-6 py-2 rounded font-medium text-white" style="background-color: var(--color-blue);">
+                                825 Go
+                            </button>
+                            <button class="px-6 py-2 rounded font-medium bg-white border border-gray-300 hover:border-gray-400 relative">
+                                1 To
+                                <span class="ml-2 text-xs" style="color: var(--color-light-green);">+100,00€</span>
+                            </button>
+                        </section>
+                    </section>
+
+                    <section class="mb-6">
+                        <p class="text-sm font-medium mb-2">Couleur:</p>
+                        <section class="flex gap-3">
+                            <button class="px-6 py-2 rounded font-medium text-white" style="background-color: var(--color-blue);">
+                                Blanc
+                            </button>
+                            <a href="Detail-gris.html" class="px-6 py-2 rounded font-medium bg-white border border-gray-300 hover:border-gray-400 relative">
+                                Gris
+                                <span class="ml-2 text-xs" style="color: var(--color-light-green);">+20,00€</span>
+                            </a>
+                            <a href="Detail-rose.html" class="px-6 py-2 rounded font-medium bg-white border border-gray-300 hover:border-gray-400">
+                                Rose
+                            </a>
+                        </section>
+                    </section>
+                </section>
+
+                <a href="Panier.html" class="w-full text-white py-3 px-4 rounded-lg font-medium text-lg transition-colors hover:opacity-90 mb-8 inline-block text-center" style="background-color: var(--color-blue);">
+                    Ajouter au panier
+                </a>
+
+                <section class="mt-8">
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Description détaillée</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                        Découvrez une nouvelle génération de jeux vidéo incroyables avec la PlayStation 5. Profitez d'un chargement ultra-rapide grâce au SSD haute vitesse, d'une immersion plus profonde avec le retour haptique, les gâchettes adaptatives et l'audio 3D, et une toute nouvelle génération de jeux PlayStation incroyables.
+                    </p>
+
+                    <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Caractéristiques principales</h3>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            SSD ultra-rapide 825 Go
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Ray tracing temps réel
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Jusqu'à 120 fps en 4K
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Manette DualSense avec retour haptique
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Audio 3D Tempest
+                        </li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+    </main>
+
+    <footer class="text-white mt-auto" style="background-color: var(--color-dark-blue);">
+        <section class="container mx-auto px-4 py-8">
+            <section class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Service Client</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Contactez-nous</a></li>
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                        <li><a href="#" class="hover:underline">Suivi de commande</a></li>
+                        <li><a href="#" class="hover:underline">Retours et remboursements</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">À propos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
+                        <li><a href="#" class="hover:underline">Nos magasins</a></li>
+                        <li><a href="#" class="hover:underline">Recrutement</a></li>
+                        <li><a href="#" class="hover:underline">Partenaires</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Informations légales</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Mentions légales</a></li>
+                        <li><a href="#" class="hover:underline">CGV</a></li>
+                        <li><a href="#" class="hover:underline">Politique de confidentialité</a></li>
+                        <li><a href="#" class="hover:underline">Gestion des cookies</a></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4 class="font-semibold mb-4" style="color: var(--color-light-green);">Suivez-nous</h4>
+                    <ul class="flex space-x-3">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                            <img src="/Facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
+                        </li>
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                            <img src="/X.png" alt="X (Twitter)" class="w-4 h-4 object-contain">
+                        </li>
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                            <img src="/Insta.png" alt="Instagram" class="w-5 h-5 object-contain">
+                        </li>
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                            <img src="/youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
+                        </li>
+                    </ul>
+                </section>
+            </section>
+
+            <section class="mt-8 pt-4 border-t border-gray-600">
+                <address class="flex flex-col md:flex-row justify-between items-center not-italic">
+                    <p class="text-sm text-gray-300">© 2025 Micromania. Tous droits réservés.</p>
+                    <section class="flex space-x-4 mt-4 md:mt-0">
+                        <span class="text-sm text-gray-300">Moyens de paiement acceptés</span>
+                        <nav class="flex space-x-3 items-center" aria-label="Moyens de paiement">
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/visa-logo-0.png" alt="Visa" class="h-5 object-contain">
+                            </span>
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/Mastercard_2019_logo.svg.png" alt="Mastercard" class="h-5 object-contain">
+                            </span>
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/pp_cc_mark_74x46.jpg" alt="PayPal" class="h-5 object-contain">
+                            </span>
+                            <span class="bg-white rounded px-2 py-1 flex items-center justify-center">
+                                <img src="/CB.png" alt="Carte Bancaire" class="h-5 object-contain">
+                            </span>
+                        </nav>
+                    </section>
+                </address>
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
+
+
+
+
