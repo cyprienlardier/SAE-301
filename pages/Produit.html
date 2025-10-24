@@ -9,7 +9,7 @@
 </head>
 <body class="bg-white min-h-screen flex flex-col">
     <header class="flex flex-col lg:flex-row">
-        <section class="text-black p-4 flex items-center justify-between lg:justify-end w-full lg:w-[700px]" style="background-color: var(--color-blue);">
+        <section class="text-black p-4 flex items-center justify-between lg:justify-end w-full lg:w-[700px] bg-brand-blue">
             <h1 class="text-2xl font-bold"><a href="../index.html" class="hover:underline">Micromania</a></h1>
             
             <button class="lg:hidden burger-icon" onclick="document.getElementById('mobileMenu').classList.toggle('active')" aria-label="Menu">
@@ -19,13 +19,13 @@
             </button>
         </section>
         
-        <nav class="text-black py-4 px-4 lg:px-8 flex-grow" style="background-color: var(--color-neon-green);" aria-label="Navigation principale">
+        <nav class="text-black py-4 px-4 lg:px-8 grow bg-brand-neon-green" aria-label="Navigation principale">
             <section class="hidden lg:flex items-center justify-between">
                 <ul class="flex space-x-8">
-                <li><a href="Console.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Console</a></li>
-                <li><a href="Catégory.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Jeux vidéo</a></li>
-                <li><a href="Produit.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Produits Dérivés</a></li>
-                <li><a href="#" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Click and collect</a></li>
+                <li><a href="Console.html" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Console</a></li>
+                <li><a href="Catégory.html" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Jeux vidéo</a></li>
+                <li><a href="Produit.html" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Produits Dérivés</a></li>
+                <li><a href="#" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Click and collect</a></li>
             </ul>
             
             <section class="flex space-x-6" aria-label="Actions utilisateur">
@@ -49,20 +49,20 @@
         </nav>
     </header>
 
-    <main class="container mx-auto py-8 px-4 flex-grow">
+    <main class="container mx-auto py-8 px-4 grow">
         <section class="mb-12">
-            <h2 class="text-3xl font-bold mb-6" style="color: var(--color-blue);">Produits Dérivés</h2>
+            <h2 class="text-3xl font-bold mb-6 text-brand-blue">Produits Dérivés</h2>
             <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
                 <article class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col">
                     <figure class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
                         <img src="/tee shirt.png" alt="T-shirt Gaming" class="h-full w-full object-contain p-2">
                     </figure>
-                    <section class="p-4 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-blue);">T-shirt Gaming</h3>
+                    <section class="p-4 flex flex-col grow">
+                        <h3 class="text-xl font-semibold mb-2 text-brand-blue">T-shirt Gaming</h3>
                         <p class="text-gray-600 text-sm mb-4">T-shirt officiel avec design exclusif de vos jeux préférés</p>
-                        <p class="text-2xl font-bold mb-4" style="color: var(--color-blue);">24,99€</p>
-                        <a href="Panier.html" class="w-full text-white py-2 px-4 rounded font-medium transition-colors hover:opacity-90 mt-auto inline-block text-center" style="background-color: var(--color-blue);">Ajouter au panier
+                        <p class="text-2xl font-bold mb-4 text-brand-blue">24,99€</p>
+                        <a href="Panier.html" class="w-full text-white py-2 px-4 rounded font-medium transition-colors hover:opacity-90 mt-auto inline-block text-center bg-brand-blue">Ajouter au panier
                         </a>
                     </section>
                 </article>
@@ -71,11 +71,11 @@
                     <figure class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
                         <img src="/mug.png" alt="Mug Gaming" class="h-full w-full object-contain p-2">
                     </figure>
-                    <section class="p-4 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-blue);">Mug Gaming</h3>
+                    <section class="p-4 flex flex-col grow">
+                        <h3 class="text-xl font-semibold mb-2 text-brand-blue">Mug Gaming</h3>
                         <p class="text-gray-600 text-sm mb-4">Mug thermoréactif avec design gaming unique</p>
-                        <p class="text-2xl font-bold mb-4" style="color: var(--color-blue);">14,99€</p>
-                        <a href="Panier.html" class="w-full text-white py-2 px-4 rounded font-medium transition-colors hover:opacity-90 mt-auto inline-block text-center" style="background-color: var(--color-blue);">Ajouter au panier
+                        <p class="text-2xl font-bold mb-4 text-brand-blue">14,99€</p>
+                        <a href="Panier.html" class="w-full text-white py-2 px-4 rounded font-medium transition-colors hover:opacity-90 mt-auto inline-block text-center bg-brand-blue">Ajouter au panier
                         </a>
                     </section>
                 </article>
@@ -84,11 +84,11 @@
                     <figure class="h-64 bg-white flex items-center justify-center relative overflow-hidden">
                         <img src="/Pop.jpg" alt="Figurine Pop" class="h-full w-full object-contain p-2">
                     </figure>
-                    <section class="p-4 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold mb-2" style="color: var(--color-blue);">Figurine Pop</h3>
+                    <section class="p-4 flex flex-col grow">
+                        <h3 class="text-xl font-semibold mb-2 text-brand-blue">Figurine Pop</h3>
                         <p class="text-gray-600 text-sm mb-4">Figurine Pop de vos personnages de jeux vidéo préférés</p>
-                        <p class="text-2xl font-bold mb-4" style="color: var(--color-blue);">16,99€</p>
-                        <a href="Panier.html" class="w-full text-white py-2 px-4 rounded font-medium transition-colors hover:opacity-90 mt-auto inline-block text-center" style="background-color: var(--color-blue);">Ajouter au panier
+                        <p class="text-2xl font-bold mb-4 text-brand-blue">16,99€</p>
+                        <a href="Panier.html" class="w-full text-white py-2 px-4 rounded font-medium transition-colors hover:opacity-90 mt-auto inline-block text-center bg-brand-blue">Ajouter au panier
                         </a>
                     </section>
                 </article>
@@ -96,11 +96,11 @@
         </section>
     </main>
 
-    <footer class="text-white mt-auto" style="background-color: var(--color-dark-blue);">
+    <footer class="text-white mt-auto bg-brand-dark-blue">
         <section class="container mx-auto px-4 py-8">
             <section class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Service Client</h4>
+                    <h4 class="font-semibold mb-4 text-brand-neon-green">Service Client</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:underline">Contactez-nous</a></li>
                         <li><a href="#" class="hover:underline">FAQ</a></li>
@@ -110,7 +110,7 @@
                 </section>
 
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">À propos</h4>
+                    <h4 class="font-semibold mb-4 text-brand-neon-green">À propos</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
                         <li><a href="#" class="hover:underline">Nos magasins</a></li>
@@ -120,7 +120,7 @@
                 </section>
 
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Informations légales</h4>
+                    <h4 class="font-semibold mb-4 text-brand-neon-green">Informations légales</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:underline">Mentions légales</a></li>
                         <li><a href="#" class="hover:underline">CGV</a></li>
@@ -130,18 +130,18 @@
                 </section>
 
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-light-green);">Suivez-nous</h4>
+                    <h4 class="font-semibold mb-4 text-brand-light-green">Suivez-nous</h4>
                     <ul class="flex space-x-3">
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/Facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
                         </li>
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/X.png" alt="X (Twitter)" class="w-4 h-4 object-contain">
                         </li>
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/Insta.png" alt="Instagram" class="w-5 h-5 object-contain">
                         </li>
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
                         </li>
                     </ul>

@@ -19,7 +19,6 @@
 
 @layer base {
   :root {
-   
     --clr-blue: #007BFF;
     --clr-green: #39FF14;
     --clr-green-dark: #7AC943;
@@ -27,19 +26,14 @@
     --clr-red: #E74C3C;
     --clr-white: #FFFFFF;
     --clr-black: #000000;
-    --clr-black: #000000;
-
- 
   }
   
- 
   nav, nav a, nav ul, nav li {
     font-family: var(--font-jost);
     font-weight: var(--font-jost-regular);
   }
   
- 
-  a[href="Panier.html"], button {
+  a[href*="Panier.html"], button {
     font-family: var(--font-jost);
     font-weight: var(--font-jost-semibold);
   }
@@ -55,5 +49,52 @@
   
   .burger-icon {
     cursor: pointer;
+  }
+}
+
+@layer utilities {
+  /* Couleurs de marque personnalisées */
+  .bg-brand-blue {
+    background-color: var(--color-blue);
+  }
+  
+  .bg-brand-neon-green {
+    background-color: var(--color-neon-green);
+  }
+  
+  .bg-brand-light-green {
+    background-color: var(--color-light-green);
+  }
+  
+  .bg-brand-dark-blue {
+    background-color: var(--color-dark-blue);
+  }
+  
+  .bg-brand-red {
+    background-color: var(--color-red);
+  }
+  
+  .bg-brand-green {
+    background-color: var(--color-green);
+  }
+  
+  .text-brand-blue {
+    color: var(--color-blue);
+  }
+  
+  .text-brand-neon-green {
+    color: var(--color-neon-green);
+  }
+  
+  .text-brand-light-green {
+    color: var(--color-light-green);
+  }
+  
+  .text-brand-dark-blue {
+    color: var(--color-dark-blue);
+  }
+  
+  .border-brand-blue {
+    border-color: var(--color-blue);
   }
 }

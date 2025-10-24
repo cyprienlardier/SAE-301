@@ -9,7 +9,7 @@
 </head>
 <body class="bg-gray-50 min-h-screen flex flex-col">
     <header class="flex flex-col lg:flex-row">
-        <section class="text-black p-4 flex items-center justify-between lg:justify-end w-full lg:w-[700px]" style="background-color: var(--color-blue);">
+        <section class="text-black p-4 flex items-center justify-between lg:justify-end w-full lg:w-[700px] bg-brand-blue">
             <h1 class="text-2xl font-bold"><a href="index.html" class="hover:underline">Micromania</a></h1>
             
             <button class="lg:hidden burger-icon" onclick="document.getElementById('mobileMenu').classList.toggle('active')" aria-label="Menu">
@@ -19,13 +19,13 @@
             </button>
         </section>
         
-        <nav class="text-black py-4 px-4 lg:px-8 flex-grow" style="background-color: var(--color-neon-green);" aria-label="Navigation principale">
+        <nav class="text-black py-4 px-4 lg:px-8 grow bg-brand-neon-green" aria-label="Navigation principale">
             <section class="hidden lg:flex items-center justify-between">
                 <ul class="flex space-x-8">
-                <li><a href="Console.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Console</a></li>
-                <li><a href="Catégory.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Jeux vidéo</a></li>
-                <li><a href="Produit.html" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Produits Dérivés</a></li>
-                <li><a href="#" class="font-medium px-4 py-2 rounded transition-all" style="border: 2px solid transparent;" onmouseover="this.style.borderColor='var(--color-blue)'" onmouseout="this.style.borderColor='transparent'">Click and collect</a></li>
+                <li><a href="Console.html" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Console</a></li>
+                <li><a href="Catégory.html" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Jeux vidéo</a></li>
+                <li><a href="Produit.html" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Produits Dérivés</a></li>
+                <li><a href="#" class="font-medium px-4 py-2 rounded transition-all border-2 border-transparent hover:border-brand-blue">Click and collect</a></li>
             </ul>                <section class="flex space-x-6" aria-label="Actions utilisateur">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
@@ -76,7 +76,7 @@
         </nav>
     </header>
 
-    <main class="container mx-auto py-8 px-4 flex-grow">
+    <main class="container mx-auto py-8 px-4 grow">
     <a href="Console.html" class="text-blue-600 hover:underline mb-6 inline-block">
             ← Retour à la liste
         </a>
@@ -87,30 +87,30 @@
             </section>
 
             <section>
-                <span class="inline-block text-white text-xs font-bold px-3 py-1 rounded mb-4" style="background-color: var(--color-blue);">
+                <span class="inline-block text-white text-xs font-bold px-3 py-1 rounded mb-4 bg-brand-blue">
                     PlayStation 5
                 </span>
                 
-                <h1 class="text-4xl font-bold mb-4" style="color: var(--color-blue);">PlayStation 5</h1>
+                <h1 class="text-4xl font-bold mb-4 text-brand-blue">PlayStation 5</h1>
                 
-                <p class="text-3xl font-bold mb-6" style="color: var(--color-blue);">549,99€</p>
+                <p class="text-3xl font-bold mb-6 text-brand-blue">549,99€</p>
                 
                 <p class="text-gray-600 mb-6">
                     La console nouvelle génération de Sony avec des graphismes ultra-réalistes
                 </p>
 
                 <section class="mb-6">
-                    <h3 class="font-semibold mb-3" style="color: var(--color-blue);">Personnalisez votre choix</h3>
+                    <h3 class="font-semibold mb-3 text-brand-blue">Personnalisez votre choix</h3>
                     
                     <section class="mb-4">
                         <p class="text-sm font-medium mb-2">Capacité: <span class="font-bold">825 Go</span></p>
                         <section class="flex gap-3">
-                            <button class="px-6 py-2 rounded font-medium text-white" style="background-color: var(--color-blue);">
+                            <button class="px-6 py-2 rounded font-medium text-white bg-brand-blue">
                                 825 Go
                             </button>
                             <button class="px-6 py-2 rounded font-medium bg-white border border-gray-300 hover:border-gray-400 relative">
                                 1 To
-                                <span class="ml-2 text-xs" style="color: var(--color-light-green);">+100,00€</span>
+                                <span class="ml-2 text-xs text-brand-light-green">+100,00€</span>
                             </button>
                         </section>
                     </section>
@@ -118,12 +118,12 @@
                     <section class="mb-6">
                         <p class="text-sm font-medium mb-2">Couleur:</p>
                         <section class="flex gap-3">
-                            <button class="px-6 py-2 rounded font-medium text-white" style="background-color: var(--color-blue);">
+                            <button class="px-6 py-2 rounded font-medium text-white bg-brand-blue">
                                 Blanc
                             </button>
                             <a href="Detail-gris.html" class="px-6 py-2 rounded font-medium bg-white border border-gray-300 hover:border-gray-400 relative">
                                 Gris
-                                <span class="ml-2 text-xs" style="color: var(--color-light-green);">+20,00€</span>
+                                <span class="ml-2 text-xs text-brand-light-green">+20,00€</span>
                             </a>
                             <a href="Detail-rose.html" class="px-6 py-2 rounded font-medium bg-white border border-gray-300 hover:border-gray-400">
                                 Rose
@@ -132,44 +132,44 @@
                     </section>
                 </section>
 
-                <a href="Panier.html" class="w-full text-white py-3 px-4 rounded-lg font-medium text-lg transition-colors hover:opacity-90 mb-8 inline-block text-center" style="background-color: var(--color-blue);">
+                <a href="Panier.html" class="w-full text-white py-3 px-4 rounded-lg font-medium text-lg transition-colors hover:opacity-90 mb-8 inline-block text-center bg-brand-blue">
                     Ajouter au panier
                 </a>
 
                 <section class="mt-8">
-                    <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Description détaillée</h3>
+                    <h3 class="text-xl font-bold mb-4 text-brand-blue">Description détaillée</h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-6">
                         Découvrez une nouvelle génération de jeux vidéo incroyables avec la PlayStation 5. Profitez d'un chargement ultra-rapide grâce au SSD haute vitesse, d'une immersion plus profonde avec le retour haptique, les gâchettes adaptatives et l'audio 3D, et une toute nouvelle génération de jeux PlayStation incroyables.
                     </p>
 
-                    <h3 class="text-xl font-bold mb-4" style="color: var(--color-blue);">Caractéristiques principales</h3>
+                    <h3 class="text-xl font-bold mb-4 text-brand-blue">Caractéristiques principales</h3>
                     <ul class="space-y-2 text-gray-600 text-sm">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             SSD ultra-rapide 825 Go
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             Ray tracing temps réel
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             Jusqu'à 120 fps en 4K
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             Manette DualSense avec retour haptique
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 mr-2 mt-0.5" style="color: var(--color-blue);" fill="currentColor" viewBox="0 0 20 20">
+                            <svg class="w-5 h-5 mr-2 mt-0.5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             Audio 3D Tempest
@@ -180,11 +180,11 @@
         </section>
     </main>
 
-    <footer class="text-white mt-auto" style="background-color: var(--color-dark-blue);">
+    <footer class="text-white mt-auto bg-brand-dark-blue">
         <section class="container mx-auto px-4 py-8">
             <section class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Service Client</h4>
+                    <h4 class="font-semibold mb-4 text-brand-neon-green">Service Client</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:underline">Contactez-nous</a></li>
                         <li><a href="#" class="hover:underline">FAQ</a></li>
@@ -194,7 +194,7 @@
                 </section>
 
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">À propos</h4>
+                    <h4 class="font-semibold mb-4 text-brand-neon-green">À propos</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
                         <li><a href="#" class="hover:underline">Nos magasins</a></li>
@@ -204,7 +204,7 @@
                 </section>
 
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Informations légales</h4>
+                    <h4 class="font-semibold mb-4 text-brand-neon-green">Informations légales</h4>
                     <ul class="space-y-2 text-sm">
                         <li><a href="#" class="hover:underline">Mentions légales</a></li>
                         <li><a href="#" class="hover:underline">CGV</a></li>
@@ -214,18 +214,18 @@
                 </section>
 
                 <section>
-                    <h4 class="font-semibold mb-4" style="color: var(--color-light-green);">Suivez-nous</h4>
+                    <h4 class="font-semibold mb-4 text-brand-light-green">Suivez-nous</h4>
                     <ul class="flex space-x-3">
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/Facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
                         </li>
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/X.png" alt="X (Twitter)" class="w-4 h-4 object-contain">
                         </li>
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/Insta.png" alt="Instagram" class="w-5 h-5 object-contain">
                         </li>
-                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);" onmouseover="this.style.backgroundColor='var(--color-light-green)'" onmouseout="this.style.backgroundColor='var(--color-light-green)'">
+                        <li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
                             <img src="/youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
                         </li>
                     </ul>

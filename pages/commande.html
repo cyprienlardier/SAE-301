@@ -10,7 +10,7 @@
 
 <body class="bg-gray-50 min-h-screen">
 	<header class="sticky top-0 z-10 shadow-sm">
-		<nav class="text-white" style="background-color: var(--color-blue);">
+		<nav class="text-white bg-brand-blue">
 			<section class="max-w-6xl mx-auto px-4">
 				<section class="h-14 flex items-center justify-between">
 					<a href="Profil.html" class="flex items-center gap-2 text-sm hover:underline" aria-label="Retour au profil">
@@ -31,26 +31,26 @@
 		<section class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
 			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
 				<p class="text-xs text-gray-500 mb-1">Total commandes</p>
-				<p class="text-3xl font-bold" style="color: var(--color-blue);">1</p>
+				<p class="text-3xl font-bold text-brand-blue">1</p>
 			</article>
 			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
 				<p class="text-xs text-gray-500 mb-1">En cours</p>
-				<p class="text-3xl font-bold" style="color: var(--color-blue);">1</p>
+				<p class="text-3xl font-bold text-brand-blue">1</p>
 			</article>
 			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
 				<p class="text-xs text-gray-500 mb-1">Livrées</p>
-				<p class="text-3xl font-bold" style="color: var(--color-blue);">0</p>
+				<p class="text-3xl font-bold text-brand-blue">0</p>
 			</article>
 			<article class="bg-white rounded-lg shadow-sm p-4 border border-gray-200">
 				<p class="text-xs text-gray-500 mb-1">Total dépensé</p>
-				<p class="text-3xl font-bold" style="color: var(--color-blue);">555,98€</p>
+				<p class="text-3xl font-bold text-brand-blue">555,98€</p>
 			</article>
 		</section>
 
 		<!-- Order history -->
 		<section class="bg-white rounded-xl shadow-sm border border-gray-200">
 			<header class="px-6 py-4 border-b border-gray-200">
-				<h2 class="text-xl font-semibold" style="color: var(--color-blue);">Historique des commandes</h2>
+				<h2 class="text-xl font-semibold text-brand-blue">Historique des commandes</h2>
 			</header>
 
 			<!-- Order item -->
@@ -61,8 +61,8 @@
 						<p class="text-sm text-gray-600">Passée le 15 octobre 2025</p>
 					</section>
 					<section class="mt-2 md:mt-0 flex items-center gap-3">
-						<span class="text-2xl font-bold" style="color: var(--color-blue);">555,98€</span>
-						<span class="px-3 py-1 rounded-full text-xs font-medium text-white" style="background-color: #f59e0b;">
+						<span class="text-2xl font-bold text-brand-blue">555,98€</span>
+						<span class="px-3 py-1 rounded-full text-xs font-medium text-white bg-orange-500">
 							En Cours
 						</span>
 					</section>
@@ -71,7 +71,7 @@
 				<!-- Product in order -->
 				<section class="flex items-center gap-4 mb-4 p-4 bg-gray-50 rounded-lg">
 					<img src="/ps5.png" alt="PlayStation 5" class="w-16 h-16 object-contain">
-					<section class="flex-grow">
+					<section class="grow">
 						<p class="font-medium">PlayStation 5</p>
 						<p class="text-sm text-gray-600">Qté: 1</p>
 					</section>
@@ -79,7 +79,7 @@
 
 				<!-- Action buttons -->
 				<section class="flex flex-col sm:flex-row gap-3">
-					<button class="flex-1 inline-flex items-center justify-center gap-2 text-white py-2.5 px-4 rounded-lg font-medium transition-colors hover:opacity-90" style="background-color: var(--color-blue);">
+					<button class="flex-1 inline-flex items-center justify-center gap-2 text-white py-2.5 px-4 rounded-lg font-medium transition-colors hover:opacity-90 bg-brand-blue">
 						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
 						</svg>
@@ -107,11 +107,11 @@
 		</section>
 	</main>
 
-	<footer class="text-white mt-12" style="background-color: var(--color-dark-blue);">
+	<footer class="text-white mt-12 bg-brand-dark-blue">
 		<section class="container mx-auto px-4 py-8">
 			<section class="grid grid-cols-1 md:grid-cols-4 gap-8">
 				<section>
-					<h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Service Client</h4>
+					<h4 class="font-semibold mb-4 text-brand-neon-green">Service Client</h4>
 					<ul class="space-y-2 text-sm">
 						<li><a href="#" class="hover:underline">Contactez-nous</a></li>
 						<li><a href="#" class="hover:underline">FAQ</a></li>
@@ -121,7 +121,7 @@
 				</section>
 
 				<section>
-					<h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">À propos</h4>
+					<h4 class="font-semibold mb-4 text-brand-neon-green">À propos</h4>
 					<ul class="space-y-2 text-sm">
 						<li><a href="#" class="hover:underline">Qui sommes-nous</a></li>
 						<li><a href="#" class="hover:underline">Nos magasins</a></li>
@@ -131,7 +131,7 @@
 				</section>
 
 				<section>
-					<h4 class="font-semibold mb-4" style="color: var(--color-neon-green);">Informations légales</h4>
+					<h4 class="font-semibold mb-4 text-brand-neon-green">Informations légales</h4>
 					<ul class="space-y-2 text-sm">
 						<li><a href="#" class="hover:underline">Mentions légales</a></li>
 						<li><a href="#" class="hover:underline">CGV</a></li>
@@ -141,18 +141,18 @@
 				</section>
 
 				<section>
-					<h4 class="font-semibold mb-4" style="color: var(--color-light-green);">Suivez-nous</h4>
+					<h4 class="font-semibold mb-4 text-brand-light-green">Suivez-nous</h4>
 					<ul class="flex space-x-3">
-						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
 							<img src="/Facebook.png" alt="Facebook" class="w-5 h-5 object-contain">
 						</li>
-						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
 							<img src="/X.png" alt="X (Twitter)" class="w-4 h-4 object-contain">
 						</li>
-						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
 							<img src="/Insta.png" alt="Instagram" class="w-5 h-5 object-contain">
 						</li>
-						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer" style="background-color: var(--color-light-green);">
+						<li class="w-8 h-8 rounded-full flex items-center justify-center transition-colors cursor-pointer bg-brand-light-green">
 							<img src="/youtube.png" alt="YouTube" class="w-5 h-5 object-contain">
 						</li>
 					</ul>
