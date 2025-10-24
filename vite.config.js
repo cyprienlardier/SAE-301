@@ -22,7 +22,7 @@ export default defineConfig({
       detailRose: resolve(__dirname, "Detail-rose.html"),
       inscription: resolve(__dirname, "inscription.html"),
       inviter: resolve(__dirname, "inviter.html"),
-      it1: resolve(__dirname, "It-1.html"),
+  console: resolve(__dirname, "Console.html"),
       panier: resolve(__dirname, "Panier.html"),
       produit: resolve(__dirname, "Produit.html"),
       profil: resolve(__dirname, "Profil.html"),
